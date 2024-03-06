@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author weiqineng * @version 1.0
  * @date 2024/3/5 14:37
  */
-//@Configuration
+@Configuration
 public class CacheConfig {
     /**
      * 存在高并发隐患：两个成员变量多个线程修改共享状态
