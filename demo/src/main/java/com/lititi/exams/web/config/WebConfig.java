@@ -21,10 +21,15 @@ public class WebConfig implements WebMvcConfigurer {
     @Autowired
     private ApiUsageInterceptor apiUsageInterceptor;
 
+    /**
+     * 用于注册拦截器
+     * 向springMVC配置添加拦截器
+     * @param registry
+     */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(loginInterceptor).addPathPatterns("/**");
         registry.addInterceptor(debounceInterceptor);
-        registry.addInterceptor(apiUsageInterceptor);
+//        registry.addInterceptor(apiUsageInterceptor);
     }
 }
